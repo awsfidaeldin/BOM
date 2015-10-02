@@ -1,0 +1,129 @@
+<script>
+
+// Question # 1
+function add(n1,n2)
+{
+
+	var sum = n1 + n2;
+	return sum;
+}
+
+console.log("The Sum of the two number is: " + " " + add(10,20));
+
+// Question # 2
+function isEven(n)
+{
+	if (n % 2 === 0)
+		console.log(n + " " + "Is an even number");
+	else
+	 	console.log(n + " " + "Is an odd number");
+
+}
+isEven(5);
+isEven(8);
+
+// Question # 3
+function inBetween(n1,n2)
+{
+	if (n1 > n2)
+	{
+		var large = n1;
+		var small = n2;
+	}
+	else 
+	{
+		var large = n2;
+		var small = n1;
+	}
+	var i = small;
+	console.log("Numbers between" + " " + small + " " + "and" + " " + large + " " + "are:");
+	while (i < large - 1)
+		{
+			small = small + 1;
+			console.log(small);
+			i++;
+		}
+}
+
+inBetween(10,20);
+
+// Question # 4
+function hypotenuse(side1, side2)
+{
+
+	var result = Math.sqrt((side1*side1) + (side2*side2));
+	return result;
+}
+
+console.log("C =" + " " + hypotenuse(3, 4));
+
+// Question # 5
+function pyramid(n)
+{
+var pyramid = [];
+
+for (var i=0 ; i<n ; i++)
+{
+	pyramid.push("@");
+	console.log(pyramid.join());
+}
+
+for (var i=n-1 ; i>=0 ; i--)
+{
+	pyramid.pop("@");
+	console.log(pyramid.join());
+}
+}
+
+pyramid(10);
+
+//Question # 6
+var obj =
+{
+width:window.innerWidth,
+height:window.innerHeight,
+windowSize:function()
+{
+	return obj;
+}
+
+}
+
+console.log(obj.windowSize());
+
+//Question # 7
+function newTab()
+{
+	window.open("http://www.google.com","topFrame");
+}
+
+newTab();
+
+//Question # 8
+function printTime() {
+    var d = new Date();
+    console.log(d);
+}
+
+setInterval(printTime, 1000);
+
+//Question # 9
+function getLocation()
+{
+	var x = window.location.protocol;
+    alert("The protocol" + " " + x);
+    var y = window.location.host;
+    alert("The Host" + " " + y);
+
+   	if (window.location.protocol !== "https"){
+
+	  alert("This is not a secure HTTP request");
+
+	} else {
+
+	  alert("This is a secure HTTP request");
+	}
+}
+getLocation();
+
+</script>
